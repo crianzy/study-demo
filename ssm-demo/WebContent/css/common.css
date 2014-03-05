@@ -1,0 +1,292 @@
+﻿@charset "utf-8";
+/*初始化*/
+body{font-size:14px;font-family:Arial, Helvetica, sans-serif,"宋体"; color:#666; background:url(../images/body_bg.png); height:100%;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form, input,textarea,p,em,button{margin:0;padding:0;} 
+a{outline:none;}
+fieldset,img {border:0;} 
+em,strong,th,i{font-style:normal;} 
+input,textarea{ outline:none;font-size:14px;overflow:visible;}
+ul,li{list-style:none; margin:0; padding:0;}
+embed,object {margin: 0;vertical-align: middle ;}
+button{overflow:visible;}
+button::-moz-focus-inner, input::-moz-focus-inner {padding: 0;border: 0 none;}
+table.w{ table-layout:fixed; word-break:break-all; word-wrap:break-word;border-collapse:collapse}
+
+/*通用*/
+label{ margin-right:20px;}
+label *{ vertical-align:middle; margin-right:4px;}
+.mod{ padding:10px;}
+.clear{ clear:both; padding:0px; margin:0px; height:0%; font-size:0px; overflow:hidden; line-height:0;}
+.clearfix:after{clear: both;content:"";display: block;height: 0;visibility: hidden;}
+.ceat *{ vertical-align:middle; margin-right:4px;}
+.p_re{ position:relative; zoom:1}
+.p_re3{ position:relative; zoom:1; z-index:60}
+.p_re2{ position:relative; zoom:1; z-index:110}
+.left{ float:left; display:inline}
+.left34{ margin-left:34px;}
+.left30{ margin-left:30px;}
+.right{ float:right; display:inline}
+.top4{ margin-top:4px;}
+.top8{ margin-top:8px;}
+.top10{ margin-top:10px;}
+.top20{ margin-top:20px;}
+.top16{ margin-top:16px;}
+.top30{ margin-top:30px;}
+.top40{ margin-top:40px;}
+.top70{ margin-top:70px;}
+.bottom10{ margin-bottom:10px;}
+.bottom20{ margin-bottom:20px;}
+.bottom40{ margin-bottom:40px;}
+.left10{ margin-left:10px;}
+.left12{ margin-left:12px;}
+.left6{ margin-left:6px;}
+.left16{ margin-left:16px;}
+.left20{ margin-left:20px;}
+.right10{ margin-right:10px}
+.right20{ margin-right:20px}
+.right40{ margin-right:40px}
+.bold{ font-weight:bold}
+.border{ border:1px #CCC solid}
+.lh_16{ line-height:16px;}
+.lh_20{ line-height:20px;}
+.lh_22{ line-height:22px;}
+.lh_24{ line-height:24px;}
+.lh_26{ line-height:26px;}
+.lh_28{ line-height:28px;}
+.lh_150{ line-height:200px;}
+.size_12{ font-size:12px}
+.size_14{ font-size:14px}
+.size_16{ font-size:16px;}
+.size_18{ font-size:18px;}
+.size_20{ font-size:20px;}
+.size_22{ font-size:22px;}
+.size_24{ font-size:24px;}
+.size_26{ font-size:26px;}
+.size_30{ font-size:30px;}
+.yahe{ font-family: "microsoft yahei"}
+.simsun{ font-family:"宋体"}
+.img_border{ border:1px #CCC solid; }
+.line-through{text-decoration:line-through}
+.main{ width:990px; margin:0 auto;}
+.indent{text-indent: 2em}
+
+a{text-decoration:none ; color:#666666;}
+a:hover{ text-decoration:underline;}
+
+.white{ color: #FFF}
+.white a{ color:#FFF}
+.white a:hover,a.white:hover{ color:#FFF;}
+
+.red{ color: #F00}
+.red a{ color:#F00}
+.red a:hover{ color:#F00}
+.red2{ color:#c70000}
+.red2 a{ color:#c70000}
+.red2 a:hover{ color:#c70000}
+.red3{ color:#ff6666}
+.red3 a{ color:#ff6666}
+.red3 a:hover{ color:#ff6666}
+
+.gray{ color:#333}
+.gray a{ color:#333}
+.gray a:hover{ color:#333}
+.gray2{ color:#666}
+.gray2 a{ color:#666}
+.gray2 a:hover{ color:#666}
+.gray3{ color:#999}
+.gray3 a{ color:#999}
+.gray3 a:hover{ color:#999}
+.gray4{ color:#ccc}
+.gray4 a{ color:#ccc}
+.gray4 a:hover{ color:#ccc}
+
+.white{ color:#fff}
+.white a{ color:#fff}
+.white a:hover{ color:#fff}
+.blue { color:#1067be}
+.blue a { color:#1067be}
+.blue a:hover {color:#1067be}
+.blue2 { color:#0a5dd8}
+.blue2 a { color:#0a5dd8}
+.blue2 a:hover {color:#0a5dd8}
+.blue3 { color:#3399ff}
+.blue3 a { color:#3399ff}
+.blue3 a:hover { color:#3399ff}
+
+.green{ color:#389909}
+.green a{ color:#389909}
+.green a:hover{ color:#389909}
+.green1{ color:#009899}
+.green1 a{ color:#009899}
+.green1 a:hover{color:#009899}
+.green2{ color:#43900b}
+.green2 a{ color:#43900b}
+.green2 a:hover{color:#43900b}
+.green3{ color:#009899}
+.green3 a{ color:#009899}
+.green3 a:hover{color:#009899}
+
+.back { color: #000}
+.back a { color:#000}
+.back a:hover {color:#000}
+
+.org{ color:#ff5200}
+.org a{ color:#ff5200}
+.org a:hover{ color:#ff5200;}
+.org2{ color:#CF9A00}
+.org2 a{ color:#CF9A00}
+.org2 a:hover{ color:#C00}
+.org3{ color:#c0a408}
+.org3 a{ color:#c0a408}
+.org3 a:hover{ color:#c0a408;}
+
+.yellow{ color:#ffad3a}
+
+
+/*错误提示*/
+.error,.suc{ font-size:12px; height:20px; line-height:20px; }
+.error span,.wenda_tb .error span{color:#F00; margin-left:0}
+.suc span,.wenda_tb .suc span{color:#389909; margin-left:0}
+.error *,.suc *{ vertical-align:middle;}
+.error img,.suc img{ margin-right:4px;}
+
+.no_data{ width:336px; height:198px; margin:50px auto;}
+
+/*提交按钮*/
+a.btn,input.btn{ background:url(../images/btn_bg.gif) repeat-x; width:164px;  text-align:center; line-height:49px; height:49px; color:#FFF; font-family:"microsoft yahei"; font-size:24px; display:block; border:none; cursor:pointer; text-decoration:none}
+input.btn2{ background:url(../images/btn_bg5.gif) repeat-x; width:164px; text-align:center; line-height:49px; height:49px; color:#FFF; font-family:"microsoft yahei"; font-size:24px; display:block; border:none; cursor:pointer; text-decoration:none}
+
+/*分页*/
+.page{ text-align:center; padding:14px 0px; font-size:14px; color:#333}
+.page a{ margin:0px 20px; color:#333}
+.page .txt{ height:24px; line-height:24px; border:1px #e0e0e0 solid; width:40px; padding:0px 4px; margin:0px 4px;}
+.page .go{ width:60px; height:24px; line-height:24px; border:1px  #313131 solid; background:#464646; text-align:center; color: #FFF; margin-left:20px; cursor:pointer}
+
+
+/*头部*/
+.top{ width:100%; height:80px; background: #c20000;}
+h1 a{  height:43px; line-height:43px; font-size:30px; color:#FFF; float:left; margin-top:16px; font-family:"黑体"; font-weight:normal; overflow:hidden;}
+.t_r{ float:right; margin-right:20px; display:inline; margin-top:24px; font-family:"microsoft yahei"; font-size:14px; color:#FFF}
+.t_r2{ margin-top:30px;}
+.t_r2 b{ background:url(../images/tongzhi_bg.gif) no-repeat; width:22px; height:21px; display:block; line-height:15px; text-align:center; color:#c50000; font-size:12px; position:absolute; top:-17px; left:19px; font-weight:normal; }
+.t_r a{ color:#FFF}
+.t_r .btn{ background:#d03232; border:1px #cf3b3b solid; width:80px; padding:0px 10px; height:30px; line-height:30px; text-align:center; font-size:16px; display:block; text-decoration:none;  }
+.t_r .btn:hover{ background:#340101; border:1px #340101 solid; text-decoration:none}
+
+/*导航*/
+.nav{ height:32px; line-height:32px; background:#000; font-size:14px; width:100%; }
+.nav a,.nav span{ color:#FFF; padding:0px 24px; text-align:center; display:block; float:left;}
+.nav span{ position:relative; zoom:1; cursor:default; width:90px; padding:0px; z-index:1100}
+.nav span div{ position:absolute; top:32px; left:0px; z-index:9; display:none}
+.nav span *{ vertical-align:middle;}
+.nav span a{ display: block; float:none; background:#585151; padding:0px 17px;}
+.nav span b{ width:7px; height:4px; display:inline-block; margin-left:5px; background:url(../images/menu_ico.gif) no-repeat}
+.nav a:hover,.nav a.cur,.nav span:hover,.nav span.cur{ background:#433b3b; text-decoration:none} 
+
+
+/*页脚*/
+.footer{ font-size:24px; font-family:"microsoft yahei"; color:#b2b2b2; text-align:center; padding:50px 0px 60px 0px; clear:both}
+.footer .f2{ margin-top:14px; font-size:14px;}
+
+/*商户登录*/
+.login_main{ background:url(../images/banner_bg.jpg) top center no-repeat; height:400px;}
+.login_main .main{ position:relative; zoom:1}
+.login_box{ width:338px; height:240px; background:#FFF; border-radius:5px; padding:20px 34px 34px 34px; font-size:14px;  position:absolute; top:50px; right:0px; overflow:hidden; zoom:1}
+.login_box input{ margin-top:24px; }
+.login_box input.txt{ width:314px; height:40px; line-height:40px; padding:0px 10px; border:1px #d8d8d8 solid; background:#faf9f9; border-radius:5px; color:#b5b5b5;}
+.login_box .bt1{ float:left; background:url(../images/btn_img1.jpg) no-repeat; width:159px; height:42px; text-indent:160px; border:none; overflow:hidden; cursor:pointer; margin-top:10px; margin-bottom:14px;}
+.login_box .bt2{ float:left; margin-left:16px; display:inline; background:url(../images/btn_img2.jpg) no-repeat; width:159px; height:42px; line-height:999px; border:none; overflow:hidden; cursor:pointer;text-indent:160px;margin-top:10px; margin-bottom:14px;}
+.login_nav{ background: url(../images/login_bg.jpg); overflow:hidden; zoom:1; padding-top:10px;}
+.login_nav ul{ padding-top:20px; background:url(../images/login_line_w.png) bottom no-repeat; overflow:hidden; zoom:1; padding-bottom:30px;}
+.login_nav ul.last,.login_nav ul li.last{ background:none}
+.login_nav li{ width:212px; float:left; background:url(../images/login_line_h.png) top right no-repeat; padding:0px 17px 20px 17px; text-align:center}
+.login_nav li span{ text-decoration:none; font-size:14px; font-weight:bold; color:#666; margin:10px auto 10px auto; display:block; width:122px; }
+.login_nav li p{ text-align:left; color:#999; line-height:24px;}
+.login_nav li b{ width:122px; height:84px; display:block; margin:0px auto; margin-bottom:8px;}
+.login_nav li b.g1{ background:url(../images/login_btn1.png) no-repeat;_background:transparent;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/login_btn1.png')}
+.login_nav li b.g2{ background:url(../images/login_btn2.png) no-repeat;_background:transparent;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/login_btn2.png')}
+.login_nav li b.g3{ background:url(../images/login_btn3.png) no-repeat;_background:transparent;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/login_btn3.png')}
+.login_nav li b.g4{ background:url(../images/login_btn4.png) no-repeat;_background:transparent;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/login_btn4.png')}
+.login_nav li b.g5{ background:url(../images/login_btn5.png) no-repeat;_background:transparent;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/login_btn5.png')}
+.login_nav li b.g6{ background:url(../images/login_btn6.png) no-repeat;_background:transparent;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/login_btn6.png')}
+.login_nav li b.g7{ background:url(../images/login_btn7.png) no-repeat;_background:transparent;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/login_btn7.png')}
+.login_nav li b.g8{ background:url(../images/login_btn8.png) no-repeat;_background:transparent;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/login_btn8.png')}
+.weixin{ background:url(../images/weixin.jpg) no-repeat; width:137px; height:176px; display:block; position:fixed; bottom:60px; right:14px;}
+*html .weixin{position:absolute;right:14px; top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight)-230+"px")}
+
+/*后台首页*/
+.map{ font-size:12px; color:#333; margin-top:16px; font-family:Arial}
+a.hd_add{ position:absolute; right:10px; top:10px; background: url(../images/btn_bg6.gif) repeat-x; border:1px #e3e3e3 solid; height:32px; line-height:32px; text-align:center; padding:0px 14px; color:#333; font-size:14px; font-family:"microsoft yahei"; text-decoration:none;}
+.main_bg{ background:url(../images/body_bg.jpg); overflow:hidden; zoom:1}
+.admin_box{ border:1px #e7e7e7 solid; background:#FFF; width:990px; margin:16px auto;overflow:hidden;zoom:1; padding-bottom:20px;}
+.admin_box2{ overflow:visible}
+.admin_box .l{ width:752px; border-right:1px #e7e7e7 dashed; float:left}
+.admin_box .table1,.admin_box .table2{ padding:30px 20px; position:relative; zoom:1}
+.admin_box .table1 span,.admin_box .table2 span{ bottom:30px; right:10px; position:absolute}
+.admin_box .table1{ border-bottom:1px #e7e7e7 dashed;}
+.admin_box .l h3{ font-size:18px; color:#333; font-family:"microsoft yahei"; margin-bottom:20px; font-weight:normal;}
+#chart1,#chart2{ width:700px; height:360px;}
+
+.admin_box .r{ float:left; width:236px; line-height:28px;}
+.admin_box .r h3{ font-size:16px; font-family:"microsoft yahei"; color:#c70000; margin:16px 0px 0px 16px; font-weight:normal}
+.admin_box .r ul{ margin:12px 24px 0px 16px;}
+.admin_box .r .line{ height:2px; line-height:0px; border-bottom:1px #e7e7e7 dashed; margin-top:10px;}
+.admin_box .r a.more{ margin-right:10px; font-size:12px; float:right; font-family:simsun}
+.news{ line-height:20px; font-size:14px}
+.news h4{ width:192px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis; margin:6px 0px}
+.news p{ text-indent:2em; font-size:12px}
+
+/*菜单*/
+.menu{ width:160px; float:left; height:590px; position:relative; zoom:1}
+.menu b{ position:absolute; right:0px; top:0px; background:url(../images/menu_bg.png) no-repeat;_background:transparent;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/menu_bg.png'); width:51px; height:700px; z-index:10}
+.menu li{ height:42px; line-height:42px; border-bottom:1px #e7e7e7 solid;}
+.menu li a{ padding-left:50px; height:42px; line-height:42px; display:block;}
+.menu li.cur{ border-bottom:2px #bf0000 solid; background:#f4f4f4; cursor:default}
+.menu li.cur a{ color:#c70000;cursor:default}
+.menu li a:hover{ text-decoration:none; color:#C70000}
+
+.box_r{ padding:16px 24px 30px 24px; float:left; width:780px; position:relative; zoom:1}
+.box_r .hd{ border-bottom:1px #eaeaea solid; height:46px; line-height:46px; color:#999; padding-bottom:8px; position:relative; zoom:1}
+.box_r .hd em{ margin-right:14px; color:#c70000; font-size:24px; font-family:"microsoft yahei";}
+.box_r .hd em span{ font-size:12px; color:#999; font-family:"宋体"; margin-left:20px;}
+.box_r .hd2{ border-bottom:1px #eaeaea solid; height:50px; line-height:50px; color:#999; }
+.tip{ border:1px #eaeaea solid; background:#f4f4f4; padding:10px 22px; color:#333; font-size:12px; margin:16px 0; overflow:hidden; zoom:1}
+.tip select{ color:#333}
+.tip .txt{ border:1px #eaeaea solid; width:100px; height:24px; line-height:24px; padding:0px 4px; background: #FFF url(../images/input_bg2.gif) right no-repeat;}
+.tip .mobile,.tip2 .mobile{ width:95px;border:1px #eaeaea solid; height:24px; line-height:24px; padding:0px 4px;color:#999; font-size:12px}
+.tip a:hover{ text-decoration:none}
+.tip .go1,.tip2 .go1{ width:60px; height:24px; border:1px #313131 solid; background: #464646; text-align:center; color:#FFF; line-height:24px; margin-left:20px; font-size:12px; cursor:pointer; display:inline-block}
+.tip .go2{ width:60px; height:24px; border:1px #3e7ebb solid; background: #4b95db; text-align:center; color:#FFF; line-height:24px; margin-left:20px; font-size:12px; cursor:pointer; display:inline-block}
+.tip .go3{ width:60px; height:24px; border:1px #999 solid; background: #aaa; text-align:center; color:#FFF; line-height:24px; margin-left:20px; font-size:12px; cursor: default; display:inline-block}
+.kefu table{ border-left:1px #eaeaea solid; border-top:1px #eaeaea solid;color:#333}
+.kefu table th,.kefu table td{ text-align:center; padding:4px; border-right:1px #eaeaea solid; border-bottom:1px #eaeaea solid}
+.kefu table th{  background:#f4f4f4; font-size:14px; box-shadow:0 1px 0 0 #FFFFFF inset; padding:10px 4px; text-align:center }
+.kefu table{ margin-top:16px;}
+.kefu table td,.kefu table th{ padding:12px 4px;}
+.wenda_tb table td{ padding:6px 4px;}
+.kefu tbody{ font-size:12px}
+.kefu table th b{ background:url(../images/gray_img.gif) no-repeat; width:11px; height:10px; margin-left:6px; display:inline-block; cursor:pointer}
+.kefu table .up{ background:url(../images/up_img.gif) no-repeat; width:11px; height:10px; margin-left:6px; display:inline-block}
+.kefu table .down{ background:url(../images/down_img.gif) no-repeat; width:11px; height:10px; margin-left:6px; display:inline-block}
+
+.kefu .tit{ text-align:left; font-size:16px; font-family:"microsoft yahei"; padding-left:20px;}
+.kefu .add_txt{ width:280px; height:28px; line-height:28px; border:1px #ccc solid;box-shadow:1px 1px 1px 1px rgba(0,0,0,.1) inset; padding:0px 4px; }
+.kefu .ceat{ text-align:left; line-height:24px;}
+.kefu .ceat input{ margin-left:20px; margin-right:4px;}
+.kefu .ceat *{ vertical-align:middle}
+.kefu .add_go{ width:142px; text-align:center; color:#FFF; font-family:"microsoft yahei"; font-size:24px; height:49px;  margin:20px auto; cursor:pointer; background:url(../images/btn_bg.gif) repeat-x; border:none; vertical-align:middle}
+
+.kefu_menu li a{ padding-left:26px;}
+.kefu table th.kefu_l{ text-align:left; padding-left:44px;}
+.kefu table td.kefu_l{ text-align:left; padding-left:20px}
+.wenda_tb input.btn,.wenda_tb input.btn2{ float:left; display:inline}
+.wenda_tb .btn{ margin-left:210px;}
+
+.wenda_tb input.txt{ width:644px; height:28px; line-height:28px; padding:0px 6px; border:1px #CCCCCC solid; box-shadow:1px 1px 1px 0px rgba(0, 0, 0, 0.1) inset; font-size:12px}
+.wenda_tb table{ border:none; margin-top:16px;}
+.wenda_tb th{ text-align:right; background:#FFF; width:106px; font-family:"microsoft yahei"; font-size:16px; font-weight:normal; border:none; vertical-align:top; padding-top:6px}
+.wenda_tb td{text-align:left; border:none}
+.wenda_tb td span{ font-size:12px; color:#999; margin-left:8px; font-family:"宋体"}
+.wenda_tb td.tt{ font-size:16px; font-family:"microsoft yahei"; height:44px; line-height:44px; padding:0px 20px; text-align:left}
+.wenda_tb .btn,.wenda_tb .btn2{ margin-top:30px; margin-bottom:30px;}
+.wenda_tb textarea{ border:1px #CCCCCC solid; box-shadow:1px 1px 1px 0px rgba(0, 0, 0, 0.1) inset; font-size:12px; width:98%; padding:5px;overflow-y:hidden}

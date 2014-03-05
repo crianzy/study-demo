@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 不需要经过用户登录跳转拦截器 -->
+	<package name="activitynotpackage" namespace="/" extends="app-interceptors-not">
+		<!-- 用户登录 -->
+		<action name="login" class="com.app.transaction.user.action.LoginAction">
+			<result name="index">/webpages/user/login.jsp</result>
+		</action>
+		
+	</package>
+	
+	<!-- 需要经过用户登录跳转拦截器 -->
+	<package name="activitypackage" namespace="/" extends="app-interceptors">
+		<!-- 用户信息 -->
+		<action name="activity" class="com.app.transaction.activity.action.ActivityAction">
+			<result name="activityList">/webpages/activity/activityList.jsp</result>
+			<result name="activityAdd">/webpages/activity/activityAdd.jsp</result>
+			<result name="activityUpdate">/webpages/activity/activityUpdate.jsp</result>
+		</action>
+		
+	</package>
+</struts>

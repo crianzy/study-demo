@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+ "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+ "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- Overwrite Convention -->
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<constant name="struts.action.extension" value="do,action,jspx"></constant>
+
+	<!-- 从这里开始配置添加的自定义struts-*.xml文件 -->
+	<include file="struts-config/struts-base.xml" />
+	<include file="struts-config/common/struts-common.xml" />
+	<include file="struts-config/default/struts-default.xml" />
+	<include file="struts-config/user/struts-user.xml" />
+
+	<!-- 系统管理 -->
+	<include file="struts-config/sys/struts-sys.xml" />
+	<!-- 发卡平台 -->
+	<include file="struts-config/card/struts-card.xml" />
+
+	<include file="struts-config/sys/struts-sys.xml" />
+
+	<include file="struts-config/channel/struts-channel.xml" />
+	
+	<!-- 营销管理 -->
+	<!-- 渠道管理  -->
+	<include file="struts-config/market/struts-market-channel.xml" />
+	<!-- 活动管理  -->
+	<include file="struts-config/activity/struts-activity.xml" />
+	<!-- 用户管理 -->
+ 	<include file="struts-config/userinfo/struts-userinfo.xml"/>
+	<!-- 充值记录 -->
+ 	<include file="struts-config/recharge/struts-recharge.xml"/>
+	<!-- 广告管理 -->
+	<include file="struts-config/ad/struts-ad.xml"/>
+	
+	<!-- 商户信息管理 -->
+	<include file="struts-config/shop/struts-shop.xml" />
+	
+	<!-- 优惠券下载 -->
+	<include file="struts-config/coupon/struts-coupon.xml" />
+	<!-- 激活记录 -->
+	<include file="struts-config/unioncard/struts-unioncard.xml" />
+	
+	
+	<!-- ulpos -->
+	<include file="struts-config/ulpos/struts-uplos.xml" />
+</struts>

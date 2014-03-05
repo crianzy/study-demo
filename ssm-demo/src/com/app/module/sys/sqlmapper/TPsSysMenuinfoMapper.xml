@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="TPsSysMenuinfo">
+	<!-- 查询菜单信息 -->
+	<select id="selectTPsSysMenuinfoByModel" parameterType="TPsSysMenuinfo"
+		resultType="TPsSysMenuinfo">
+		select * from t_ps_sys_menuinfo where 1 = 1
+		<if test="mid != null">
+			and mid = #{mid}
+		</if>
+		<if test="mname != null">
+			and mname = #{mname}
+		</if>
+		<if test="parentid != null">
+			and parentid = #{parentid}
+		</if>
+		<if test="levelno != null">
+			and levelno = #{levelno}
+		</if>
+		<if test="isvalid != null">
+			and isvalid = #{isvalid}
+		</if>
+		<if test="msort != null">
+			and msort = #{msort}
+		</if>
+		<if test="speciallist != null">
+			and mid in
+			<foreach item="item" index="index" collection="speciallist"
+				open="(" separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		order by msort
+	</select>
+
+	<select id="selectTPsSysMenuinfoMaxMSortByModel" parameterType="TPsSysMenuinfo"
+		resultType="Integer">
+		SELECT MAX(msort) FROM t_ps_sys_menuinfo WHERE parentid = #{parentid}
+		<if test="msort != null">
+			and msort &lt; #{msort}
+		</if>
+	</select>
+	<select id="selectTPsSysMenuinfoMinMSortByModel" parameterType="TPsSysMenuinfo"
+		resultType="Integer">
+		SELECT MIN(msort) FROM t_ps_sys_menuinfo WHERE parentid = #{parentid}
+		<if test="msort != null">
+			and msort &gt; #{msort}
+		</if>
+	</select>
+
+	<!-- 新增菜单信息 -->
+	<insert id="insertTPsSysMenuinfoByModel" parameterType="TPsSysMenuinfo"
+		useGeneratedKeys="true" keyProperty="mid">
+		insert into t_ps_sys_menuinfo
+		(parentid,mname,mdesc,actionurl,msort,isvalid,remark,optuserid,optusername,isleaf,levelno)
+		values
+		(#{parentid},#{mname},#{mdesc},#{actionurl},#{msort},#{isvalid},#{remark},#{optuserid},#{optusername},#{isleaf},#{levelno})
+	</insert>
+
+	<!-- 修改菜单信息 -->
+	<update id="updateTPsSysMenuinfoByModel" parameterType="TPsSysMenuinfo">
+		update t_ps_sys_menuinfo
+		<trim prefix="set" suffixOverrides=",">
+			<if test="parentid != null">
+				parentid = #{parentid},
+			</if>
+			<if test="mname != null">
+				mname = #{mname},
+			</if>
+			<if test="mdesc != null">
+				mdesc = #{mdesc},
+			</if>
+			<if test="actionurl != null">
+				actionurl = #{actionurl},
+			</if>
+			<if test="msort != null">
+				msort = #{msort},
+			</if>
+			<if test="isvalid != null">
+				isvalid = #{isvalid},
+			</if>
+			<if test="remark != null">
+				remark = #{remark},
+			</if>
+			<if test="optuserid != null">
+				optuserid = #{optuserid},
+			</if>
+			<if test="optusername != null">
+				optusername = #{optusername},
+			</if>
+			<if test="isleaf != null">
+				isleaf = #{isleaf},
+			</if>
+			<if test="levelno != null">
+				levelno = #{levelno},
+			</if>
+		</trim>
+		where 1 = 1
+		<if test="mid != null">
+			and mid = #{mid}
+		</if>
+	</update>
+
+	<!-- 删除菜单信息 -->
+	<delete id="deleteTPsSysMenuinfoByModel" parameterType="TPsSysMenuinfo">
+		delete from t_ps_sys_menuinfo
+		where 1 = 1
+		<if test="mid != null">
+			and mid = #{mid}
+		</if>
+		<if test="parentid != null">
+			and parentid = #{parentid}
+		</if>
+	</delete>
+
+	<!-- 查询菜单信息分页列表 -->
+	<select id="selectTPsSysMenuinfo_list_page" parameterType="TPsSysMenuinfo"
+		resultType="java.util.HashMap">
+		select * from t_ps_sys_menuinfo
+		where 1 = 1
+		<if test="parentid != null">
+			and parentid = #{parentid}
+		</if>
+		order by msort
+		limit #{start},#{end}
+	</select>
+
+	<select id="selectTPsSysMenuinfo_list_page_count" parameterType="TPsSysMenuinfo"
+		resultType="Integer">
+		select count(*) from t_ps_sys_menuinfo
+		where 1 = 1
+		<if test="parentid != null">
+			and parentid = #{parentid}
+		</if>
+	</select>
+</mapper>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<!-- 账户信息 -->
+		<typeAlias alias="TPsSysUserinfo" type="com.app.module.user.dto.TPsSysUserinfo" />
+		<!-- 系统信息 -->
+		<typeAlias alias="TPsSysRoleinfo" type="com.app.module.sys.dto.TPsSysRoleinfo" />
+		<typeAlias alias="TPsSysRoleuserRel" type="com.app.module.sys.dto.TPsSysRoleuserRel" />
+		<typeAlias alias="TPsSysMenuinfo" type="com.app.module.sys.dto.TPsSysMenuinfo" />
+		<typeAlias alias="TPsSysRolemenuRel" type="com.app.module.sys.dto.TPsSysRolemenuRel" />
+	</typeAliases>
+	<mappers>
+		<!-- 账户信息 -->
+		<mapper resource="com/app/module/user/sqlmapper/TPsSysUserinfoMapper.xml" />
+		<!-- 系统信息 -->
+		<mapper resource="com/app/module/sys/sqlmapper/TPsSysRoleinfoMapper.xml" />
+		<mapper resource="com/app/module/sys/sqlmapper/TPsSysRoleuserRelMapper.xml" />
+		<mapper resource="com/app/module/sys/sqlmapper/TPsSysMenuinfoMapper.xml" />
+		<mapper resource="com/app/module/sys/sqlmapper/TPsSysRolemenuRelMapper.xml" />
+	</mappers>
+</configuration>
+

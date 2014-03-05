@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="commonpackage" namespace="/" extends="app-interceptors-not">
+		<!-- 获取服务器当前时间 -->
+		<action name="getServCurrDate" class="com.app.transaction.common.action.UtilAction" method="getDate">
+		</action>
+		
+		<!-- 获取省市下拉列表 -->
+		<action name="sysCity" class="com.app.transaction.common.action.SysCityAction">
+			<result name="province">/webpages/common/province.jsp</result>
+			<result name="city">/webpages/common/city.jsp</result>
+			<result name="area">/webpages/common/area.jsp</result>
+		</action>
+		
+		<!-- 文件上传 -->
+		<action name="upload" class="com.app.transaction.common.action.UploadCommonAction" >
+		</action>
+		
+		<!-- 文件下载 -->
+		<action name="download" class="com.app.transaction.common.action.DownloadAction">
+           <result type="stream">
+	           <param name="contentType">application/octet-stream</param>
+	           <param name="inputName">inputStream</param>
+	           <param name="contentDisposition">attachment;filename="${fileName}"</param>
+	           <param name="bufferSize">10240000</param>
+           </result>
+        </action>
+	</package>
+</struts>

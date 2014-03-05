@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- 需要经过用户登录跳转拦截器 -->
+	<package name="channelpackage" namespace="/" extends="app-interceptors">
+		<action name="channel" class="com.app.transaction.channel.action.ChannelAction">
+			<result name="channelList">/webpages/channel/channelList.jsp</result>
+			<result name="channelAdd">/webpages/channel/channelAdd.jsp</result>
+			<result name="channelUpdate">/webpages/channel/channelUpdate.jsp</result>
+		</action>
+		<action name="chcard" class="com.app.transaction.channel.action.ChannelCardAction">
+			<result name="channelCardList">/webpages/channel/channelCardList.jsp</result>
+			<result name="channelCardAdd">/webpages/channel/channelCardAdd.jsp</result>
+			<result name="channelCardUpdate">/webpages/channel/channelCardUpdate.jsp</result>
+			<result name="lhlist">/webpages/channel/channelCardlhlist.jsp</result>
+			<result name="channelCardCheck">/webpages/channel/channelCardCheck.jsp</result>
+			<result name="channelCardTiqu">/webpages/channel/channelCardTiqu.jsp</result>
+		</action>
+		<action name="chmanage" class="com.app.transaction.channel.action.ChannelManageAction">
+			<result name="channelCardList">/webpages/channelManage/channelCardList.jsp</result>
+			<result name="channelCardInfo">/webpages/channelManage/channelCardInfo.jsp</result>
+		</action>
+		
+		
+	</package>
+</struts>

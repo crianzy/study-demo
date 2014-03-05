@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="TPsUmUserinfo">
+	<!-- 查询用户信息 -->
+	<select id="selectTPsUmUserinfoByModel" parameterType="TPsUmUserinfo"
+		resultType="TPsUmUserinfo">
+		select * from t_ps_um_userinfo where 1 = 1
+		<if test="id != null">
+			and id = #{id} 
+		</if>
+		<if test="username != null">
+			and username = #{username} 
+		</if>
+		<if test="realname != null">
+			and realname = #{realname} 
+		</if>
+		<if test="userpic != null">
+			and userpic = #{userpic} 
+		</if>
+		<if test="mobile != null">
+			and mobile = #{mobile} 
+		</if>
+		<if test="paperstype != null">
+			and paperstype = #{paperstype} 
+		</if>
+		<if test="papersno != null">
+			and papersno = #{papersno} 
+		</if>
+		<if test="email != null">
+			and email = #{email} 
+		</if>
+		<if test="qq != null">
+			and qq = #{qq} 
+		</if>
+		<if test="birthday != null">
+			and birthday = #{birthday} 
+		</if>
+		<if test="usex != null">
+			and usex = #{usex} 
+		</if>
+		<if test="province != null">
+			and province = #{province} 
+		</if>
+		<if test="city != null">
+			and city = #{city} 
+		</if>
+		<if test="area != null">
+			and area = #{area} 
+		</if>
+		<if test="address != null">
+			and address = #{address} 
+		</if>
+		<if test="postcard != null">
+			and postcard = #{postcard} 
+		</if>
+		<if test="isbindtel != null">
+			and isbindtel = #{isbindtel} 
+		</if>
+		<if test="isbindemail != null">
+			and isbindemail = #{isbindemail} 
+		</if>
+		<if test="isbandpapers != null">
+			and isbandpapers = #{isbandpapers} 
+		</if>
+		<if test="regdate != null">
+			and regdate = #{regdate} 
+		</if>
+		<if test="starttime != null and endtime != null">
+			and ADDTIME BETWEEN #{starttime} AND #{endtime}
+		</if>
+	</select>
+		<!-- 查询用户信息分页列表 -->
+	<select id="selectTPsUmUserinfo_list_page" parameterType="TPsUmUserinfo" resultType="java.util.HashMap">
+		select * from t_ps_um_userinfo where 1 = 1 
+		<if test="id != null">
+			and id = #{id} 
+		</if>
+		<if test="username != null">
+			and username = #{username} 
+		</if>
+		<if test="realname != null">
+			and realname = #{realname} 
+		</if>
+		<if test="userpic != null">
+			and userpic = #{userpic} 
+		</if>
+		<if test="mobile != null">
+			and mobile = #{mobile} 
+		</if>
+		<if test="paperstype != null">
+			and paperstype = #{paperstype} 
+		</if>
+		<if test="papersno != null">
+			and papersno = #{papersno} 
+		</if>
+		<if test="email != null">
+			and email = #{email} 
+		</if>
+		<if test="qq != null">
+			and qq = #{qq} 
+		</if>
+		<if test="birthday != null">
+			and birthday = #{birthday} 
+		</if>
+		<if test="usex != null">
+			and usex = #{usex} 
+		</if>
+		<if test="province != null">
+			and province = #{province} 
+		</if>
+		<if test="city != null">
+			and city = #{city} 
+		</if>
+		<if test="area != null">
+			and area = #{area} 
+		</if>
+		<if test="address != null">
+			and address = #{address} 
+		</if>
+		<if test="postcard != null">
+			and postcard = #{postcard} 
+		</if>
+		<if test="isbindtel != null">
+			and isbindtel = #{isbindtel} 
+		</if>
+		<if test="isbindemail != null">
+			and isbindemail = #{isbindemail} 
+		</if>
+		<if test="isbandpapers != null">
+			and isbandpapers = #{isbandpapers} 
+		</if>
+		<if test="regdate != null">
+			and regdate = #{regdate} 
+		</if>
+		<if test="starttime != null"> and STR_TO_DATE(regdate, '%Y-%m-%d')>=STR_TO_DATE(#{starttime}, '%Y-%m-%d') </if> 
+		<if test="endtime != null"> and STR_TO_DATE(regdate, '%Y-%m-%d')<![CDATA[<=]]>STR_TO_DATE(#{endtime}, '%Y-%m-%d') </if>
+	</select>
+	<!-- 查询用户信息分页列表 -->
+	<select id="selectTPsUmUserinfo_list_page_count" parameterType="TPsUmUserinfo" resultType="Integer">
+		select count(*) from t_ps_um_userinfo where 1 = 1 
+		<if test="id != null">
+			and id = #{id} 
+		</if>
+		<if test="username != null">
+			and username = #{username} 
+		</if>
+		<if test="realname != null">
+			and realname = #{realname} 
+		</if>
+		<if test="userpic != null">
+			and userpic = #{userpic} 
+		</if>
+		<if test="mobile != null">
+			and mobile = #{mobile} 
+		</if>
+		<if test="paperstype != null">
+			and paperstype = #{paperstype} 
+		</if>
+		<if test="papersno != null">
+			and papersno = #{papersno} 
+		</if>
+		<if test="email != null">
+			and email = #{email} 
+		</if>
+		<if test="qq != null">
+			and qq = #{qq} 
+		</if>
+		<if test="birthday != null">
+			and birthday = #{birthday} 
+		</if>
+		<if test="usex != null">
+			and usex = #{usex} 
+		</if>
+		<if test="province != null">
+			and province = #{province} 
+		</if>
+		<if test="city != null">
+			and city = #{city} 
+		</if>
+		<if test="area != null">
+			and area = #{area} 
+		</if>
+		<if test="address != null">
+			and address = #{address} 
+		</if>
+		<if test="postcard != null">
+			and postcard = #{postcard} 
+		</if>
+		<if test="isbindtel != null">
+			and isbindtel = #{isbindtel} 
+		</if>
+		<if test="isbindemail != null">
+			and isbindemail = #{isbindemail} 
+		</if>
+		<if test="isbandpapers != null">
+			and isbandpapers = #{isbandpapers} 
+		</if>
+		<if test="regdate != null">
+			and regdate = #{regdate} 
+		</if>
+		<if test="starttime != null"> and STR_TO_DATE(regdate, '%Y-%m-%d')>=STR_TO_DATE(#{starttime}, '%Y-%m-%d') </if> 
+		<if test="endtime != null"> and STR_TO_DATE(regdate, '%Y-%m-%d')<![CDATA[<=]]>STR_TO_DATE(#{endtime}, '%Y-%m-%d') </if>
+	</select>
+</mapper>
