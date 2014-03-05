@@ -3,6 +3,7 @@ package com.app.utils.util;
 import java.util.Comparator;
 import java.util.Map;
 
+@SuppressWarnings("all")
 public class ComparatorMap implements Comparator{
 	public int compare(Object arg0, Object arg1) {
 		   Map obj0=(Map)arg0;

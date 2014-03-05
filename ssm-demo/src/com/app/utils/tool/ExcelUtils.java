@@ -13,7 +13,6 @@ import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.util.List;
 
-import jxl.Cell;
 import jxl.Workbook;
 import jxl.format.Alignment;
 import jxl.format.Border;
