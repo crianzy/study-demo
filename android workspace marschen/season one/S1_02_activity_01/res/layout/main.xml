@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 该文件是布局文件，是说在Activity当中所使用的控件，以及控件的位置，都可以在这个文件当中进行之指定 -->
+<!-- 声明一个线性布局(LinearLayout)，这个布局也算是一个控件，它的布局方向是纵向，宽度和高度都是填满父控件。使用这种布局意味着所有的控件会像一条线一样排列 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 声明一个TextView控件，该控件的宽度是填满父控件，也就是 上面的LinearLayout控件,高度是包裹住内容 -->
+    <TextView
+        android:id="@+id/myTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    
+    <!-- 声明一个Button控件，该控件的宽度是填满父控件，也就是 上面的LinearLayout控件,高度是包裹住内容 -->
+    <Button
+        android:id="@+id/myButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
