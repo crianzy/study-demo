@@ -1,1 +1,0 @@
-INDEX VERSION 1.126+D:\all workspace\git-hub\study-demo\android workspace marschen\season one\.metadata\.plugins\org.eclipse.jdt.core

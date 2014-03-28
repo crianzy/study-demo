@@ -1,8 +1,0 @@
-package mars.utils;
-
-import android.os.AsyncTask;
-
-public class DownloadWebpageTask extends AsyncTask<String, Void, String> {
-
-	
-}
